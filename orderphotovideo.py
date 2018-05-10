@@ -135,7 +135,7 @@ def orderphotovideo(inputfile,outputfile,flag):
         if os.path.isfile(photofile):
             process_file(photofile,outputfile,flag)
         elif os.path.isdir(photofile):
-            usage(photofile,outputfile,flag)
+            orderphotovideo(photofile,outputfile,flag)
         else:
             print("%s is neither a dir or a photo/video"%photofile)
 
